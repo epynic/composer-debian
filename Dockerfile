@@ -20,6 +20,9 @@ RUN docker-php-ext-install zip
 ENV COMPOSER_HOME /tmp
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+# Permission
+RUN chmod 0777 /tmp
+
 # Mirror
 RUN composer config -g repos.packagist composer https://packagist.com.br
 
