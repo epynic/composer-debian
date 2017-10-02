@@ -8,7 +8,7 @@ FROM php:latest
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 # Required
-RUN apt-get update && apt-get install -y curl git openssl zip unzip vim tree wget
+RUN apt-get update && apt-get install -y curl git openssl zip unzip vim tree wget htop glances
 
 # PHP extensions
 RUN pecl install apcu && docker-php-ext-enable apcu
