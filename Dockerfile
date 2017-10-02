@@ -20,11 +20,11 @@ RUN docker-php-ext-install zip
 ENV COMPOSER_HOME /tmp
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-# Permission
-RUN chmod 0777 -R /tmp
-
 # Mirror
 RUN composer config -g repos.packagist composer https://packagist.com.br
 
 # Tools
 RUN composer global require hirak/prestissimo
+
+# Permission
+RUN chmod -R 0777 /tmp
