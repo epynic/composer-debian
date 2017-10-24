@@ -2,7 +2,7 @@
 
 # Composer Debian
 
-Docker image of composer based on Debian. Only the latest version is avaiable. 
+Docker image of composer based on Debian. Only the latest version is available. 
 [Let me know](https://github.com/Webysther/composer-debian/issues) if you want another.
 
 ## Usage
