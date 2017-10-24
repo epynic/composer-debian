@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t composer-debian .
+docker build -t webysther/composer-debian .
