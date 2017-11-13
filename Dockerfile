@@ -10,8 +10,12 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 # Required
 RUN apt-get update && apt-get install -y curl git openssl zip unzip vim tree wget htop glances
 
-# PHP extensions
+# acpu
 RUN pecl install apcu && docker-php-ext-enable apcu
+
+# xdebug
+RUN pecl install xdebug-2.5.0 \
+    && docker-php-ext-enable xdebug
 
 RUN apt-get install -y libz-dev
 RUN docker-php-ext-install zip
