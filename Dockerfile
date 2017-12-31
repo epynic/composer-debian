@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y curl git openssl zip unzip vim tree wge
 RUN pecl install apcu && docker-php-ext-enable apcu
 
 # xdebug
-RUN pecl install xdebug-2.5.0 \
+RUN pecl install xdebug-2.6.0beta1 \
     && docker-php-ext-enable xdebug
 
 RUN apt-get install -y libz-dev
