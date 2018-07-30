@@ -8,16 +8,15 @@ FROM php:latest
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 # Required
-RUN apt-get update && apt-get install -y curl git openssl zip unzip vim tree wget htop glances
+RUN apt-get update && apt-get install -y curl git openssl zip unzip wget libz-dev && rm -rf /var/lib/apt/lists/*
 
 # acpu
 RUN pecl install apcu && docker-php-ext-enable apcu
 
 # xdebug
-RUN pecl install xdebug-2.6.0beta1 \
-    && docker-php-ext-enable xdebug
+RUN pecl install xdebug-2.6.0beta1 && docker-php-ext-enable xdebug
 
-RUN apt-get install -y libz-dev
+# zip
 RUN docker-php-ext-install zip
 
 # Composer env
