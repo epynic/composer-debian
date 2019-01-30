@@ -8,7 +8,7 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 # Required
 RUN apt-get update && apt-get install --no-install-recommends -y curl git \
-    openssl zip unzip wget libz-dev && rm -rf /var/lib/apt/lists/*
+    openssl zip unzip wget libzip-dev && rm -rf /var/lib/apt/lists/*
 
 # acpu
 RUN pecl install apcu && docker-php-ext-enable apcu
