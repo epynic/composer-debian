@@ -1,4 +1,6 @@
 [![Build Status](https://goo.gl/dLEN34)](https://hub.docker.com/r/webysther/composer-debian/)
+[![Docker pulls](https://goo.gl/qzhTz1)](https://hub.docker.com/r/webysther/packagist-mirror/)
+[![Software License](https://goo.gl/FU2Kw1)](LICENSE)
 
 # Composer Debian
 
