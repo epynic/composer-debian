@@ -1,7 +1,7 @@
 FROM composer:latest AS composer
 
 # continue with the official PHP image
-FROM php:7
+FROM php:7.2
 
 # copy the Composer PHAR from the Composer image into the PHP image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
