@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y curl git \
 # apcu
 RUN pecl install apcu && docker-php-ext-enable apcu
 
+# pthreads
+RUN pecl install pthreads
+
 # zip
 RUN docker-php-ext-install zip
 
