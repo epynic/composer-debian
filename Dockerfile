@@ -1,7 +1,7 @@
 FROM composer:latest AS composer
 
 # continue with the official PHP image
-FROM php:zts
+FROM php:7
 
 # copy the Composer PHAR from the Composer image into the PHP image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
@@ -12,9 +12,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y curl git \
 
 # apcu
 RUN pecl install apcu && docker-php-ext-enable apcu
-
-# pthreads
-RUN pecl install pthreads
 
 # zip
 RUN docker-php-ext-install zip
